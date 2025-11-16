@@ -8,5 +8,5 @@
 		},
 		width: 3,
 		height: 3,
-		output: { type: "item", code: "aplauncher" }
+		output: { type: "item", code: "aplauncher-crude" }
 	}

@@ -8,15 +8,15 @@
 	"textureSizes": {
 	},
 	"textures": {
-		"handle": "game:block/wood/debarked/oak",
-		"material": "game:block/wood/debarked/oak"
 	},
 	"elements": [
 		{
 			"name": "Base",
-			"from": [ 8.0, 0.0, 8.0 ],
-			"to": [ 8.0, 0.0, 8.0 ],
-			"rotationOrigin": [ 8.0, 0.0, 8.0 ],
+			"from": [ 8.0, 0.0, 24.0 ],
+			"to": [ 8.0, 0.0, 24.0 ],
+			"rotationOrigin": [ 8.0, 0.0, 24.0 ],
+			"rotationX": -90.0,
+			"rotationY": -180.0,
 			"faces": {
 				"north": { "texture": "#handle", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
 				"east": { "texture": "#handle", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
@@ -27,7 +27,7 @@
 			},
 			"children": [
 				{
-					"name": "Frame",
+					"name": "AFrame",
 					"from": [ -0.5, 0.0, -8.0 ],
 					"to": [ 0.25, 0.75, 8.0 ],
 					"rotationOrigin": [ -1.0, 0.0, -8.0 ],
@@ -41,7 +41,7 @@
 					},
 					"children": [
 						{
-							"name": "Notch",
+							"name": "ALauncher",
 							"from": [ 0.125, 0.1, 0.35 ],
 							"to": [ 0.625, 0.6, 1.85 ],
 							"rotationOrigin": [ 0.0, 0.0, 0.0 ],
@@ -58,17 +58,17 @@
 					]
 				},
 				{
-					"name": "Handle",
+					"name": "Yesnt",
 					"from": [ -0.6, 0.0, 5.0 ],
 					"to": [ 0.4, 1.0, 8.0 ],
 					"rotationOrigin": [ 0.0, 0.0, 5.0 ],
 					"faces": {
-						"north": { "texture": "#material", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-						"east": { "texture": "#material", "uv": [ 0.0, 0.0, 3.0, 1.0 ] },
-						"south": { "texture": "#material", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
-						"west": { "texture": "#material", "uv": [ 7.5, 4.5, 10.5, 5.5 ] },
-						"up": { "texture": "#material", "uv": [ 7.0, 2.5, 8.0, 5.5 ] },
-						"down": { "texture": "#material", "uv": [ 0.0, 0.0, 1.0, 3.0 ] }
+						"north": { "texture": "#handle", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+						"east": { "texture": "#handle", "uv": [ 0.0, 0.0, 3.0, 1.0 ] },
+						"south": { "texture": "#handle", "uv": [ 0.0, 0.0, 1.0, 1.0 ] },
+						"west": { "texture": "#handle", "uv": [ 7.5, 4.5, 10.5, 5.5 ] },
+						"up": { "texture": "#handle", "uv": [ 7.0, 2.5, 8.0, 5.5 ] },
+						"down": { "texture": "#handle", "uv": [ 0.0, 0.0, 1.0, 3.0 ] }
 					}
 				}
 			]

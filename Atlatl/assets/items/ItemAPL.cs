@@ -12,6 +12,7 @@ using Vintagestory.API.Common.Entities;
 using Vintagestory.API.Config;
 using Vintagestory.API.Util;
 using Vintagestory.Client.NoObf;
+using System.Diagnostics;
 
 namespace Atlatl.assets.items
 {
@@ -97,6 +98,15 @@ namespace Atlatl.assets.items
             IPlayer byPlayer = null;
             if (byEntity is EntityPlayer) byPlayer = byEntity.World.PlayerByUid(((EntityPlayer)byEntity).PlayerUID);
 
+
+
+            if (byEntity.World is IClientWorldAccessor)
+            {
+                slot.Itemstack.TempAttributes.SetInt("renderVariant", 1);
+            }
+
+            slot.Itemstack.Attributes.SetInt("renderVariant", 1);
+
             handling = EnumHandHandling.PreventDefault;
         }
         // Below orients the model of the Atlatl to look appropriate as the player readies to fire.
@@ -107,14 +117,25 @@ namespace Atlatl.assets.items
 
             if (byEntity.World is IClientWorldAccessor)
             {
-                ModelTransform tf = new ModelTransform();
-                tf.EnsureDefaultValues();
+                int renderVariant = GameMath.Clamp((int)Math.Ceiling(secondsUsed * 4), 0, 2);
+                int prevRenderVariant = slot.Itemstack.Attributes.GetInt("renderVariant", 1);
 
-                float offset = GameMath.Clamp(secondsUsed * 3, 0, 1.5f);
+                slot.Itemstack.TempAttributes.SetInt("renderVariant", renderVariant);
+                slot.Itemstack.Attributes.SetInt("renderVariant", renderVariant);
 
-                tf.Translation.Set(offset / 4f, offset / 2f, 0);
-                tf.Rotation.Set(0, 0, GameMath.Min(15, secondsUsed * 360 / 1.5f));
+                if (prevRenderVariant != renderVariant)
+                {
+                    (byEntity as EntityPlayer)?.Player?.InventoryManager.BroadcastHotbarSlot();
+                }
+
             }
+
+            if (byEntity.World is IClientWorldAccessor)
+            {
+                slot.Itemstack.TempAttributes.SetInt("renderVariant", 1);
+            }
+
+            slot.Itemstack.Attributes.SetInt("renderVariant", 1);
 
             return true;
         }
@@ -130,6 +151,15 @@ namespace Atlatl.assets.items
                 byEntity.Attributes.SetInt("aimingCancel", 1);
             }
 
+            if (byEntity.World is IClientWorldAccessor)
+            {
+                slot.Itemstack?.TempAttributes.RemoveAttribute("renderVariant");
+            }
+
+            slot.Itemstack?.Attributes.SetInt("renderVariant", 0);
+
+            if (cancelReason != EnumItemUseCancelReason.Destroyed) (byEntity as EntityPlayer)?.Player?.InventoryManager.BroadcastHotbarSlot();
+
             return true;
         }
         
@@ -139,6 +169,9 @@ namespace Atlatl.assets.items
             if (byEntity.Attributes.GetInt("aimingCancel") == 1) return;
             byEntity.Attributes.SetInt("aiming", 0);
             byEntity.AnimManager.StopAnimation("slingaimbalearic");
+
+            slot.Itemstack.Attributes.SetInt("renderVariant", 0);
+            (byEntity as EntityPlayer)?.Player?.InventoryManager.BroadcastHotbarSlot();
 
             byEntity.World.RegisterCallback((dt) =>
             {

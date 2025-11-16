@@ -1,16 +1,28 @@
 {
   "code": "aplauncher",
   "class": "TheAtlatl.apl",
+  "variantgroups": [
+	{ "code": "type", "states": ["crude", "simple"] } ],
   "creativeinventory": { "general": ["*"], "items": ["*"] },
-  "durability": 160,
+  "durabilityByType": {
+	  "crude": 160,
+	  "simple": 480 },
   "attributes": {
 	"damage": 6,
 	},
   "shape": {
-    "base": "item/launcher-crude"
+    "base": "item/launcher-crude",
+	"alternates": [
+		{ "base": "atlatl:item/launcher-crude-charge1"}	
+	]
 	},
-	"texture": {
-		"base": "game:block/wood/bark/oak"
+	"texturesByType": {
+		"aplauncher-crude": { 
+			"material": {"base":  "game:block/wood/bark/oak" },
+			"handle": {"base":  "game:block/wood/bark/oak" } },
+		"aplauncher-simple": { 
+			"material": {"base":  "game:block/linen" },
+			"handle": {"base": "game:block/wood/debarked/oak" } }
 	},
 	"guiTransform": {
 		"translation": { 
