@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36623.8 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Atlatl", "Atlatl\Atlatl.csproj", "{552AD060-5E10-4531-B68E-FECE4C50945C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CakeBuild", "ZZCakeBuild\CakeBuild.csproj", "{0D7D94FB-2C14-46C6-B926-E5A64CAF1931}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{552AD060-5E10-4531-B68E-FECE4C50945C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{552AD060-5E10-4531-B68E-FECE4C50945C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{552AD060-5E10-4531-B68E-FECE4C50945C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{552AD060-5E10-4531-B68E-FECE4C50945C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D7D94FB-2C14-46C6-B926-E5A64CAF1931}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D7D94FB-2C14-46C6-B926-E5A64CAF1931}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D7D94FB-2C14-46C6-B926-E5A64CAF1931}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D7D94FB-2C14-46C6-B926-E5A64CAF1931}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C74AF62A-7DCE-4022-A8FF-6FDC9FDE51FB}
+	EndGlobalSection
+EndGlobal

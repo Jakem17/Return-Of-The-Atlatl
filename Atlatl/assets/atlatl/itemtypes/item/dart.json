@@ -1,0 +1,80 @@
+{
+  "code": "dart",
+  "class": "TheAtlatl.apd",
+  "variantgroups": [
+		{ "code": "material", "states": ["crude", "flint", "copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver", "iron", "meteoriciron", "steel", "bone", "obsidian" ] } ],
+  "guiTransform": {
+		"translation": { 
+			"x": -4, "y": -42, "z": 0 },
+		"rotation": { 
+			"x": -111, "y": -33, "z": 44 },
+		"scale": 3.26
+	},
+		"tpHandTransform": {
+		"translation": { 
+			"x": -0.99, "y": -0.9, "z": -0.43 },
+		"rotation": { 
+			"x": -85, "y": -91, "z": -98 },
+		"scale": 1.1
+	},
+		"groundTransform": {
+		"translation": { 
+			"x": 0, "y": 0.8, "z": 0 },
+		"rotation": { 
+			"x": -2, "y": -51, "z": -1 },
+		"origin": { "x": 0.65, "y": 0.65, "z": 0.65 },
+		"scale": 6
+	},
+	"shapeByType": { 
+		"dart-crude": { "base": "item/dart-crude" },
+		"dart-flint": { "base": "item/dart-stone" },
+		"dart-obsidian": { "base": "item/dart-stone" },
+		"dart-bone": { "base": "item/dart-stone" },
+		"*": { "base": "item/dart-metal" }
+	},
+	"texturesByType" : {
+		"dart-crude": { },
+		"dart-flint": { 
+			"material": {"base": "game:block/stone/flint" } },
+		"dart-obsidian": {
+			"material": {"base": "game:block/stone/rock/obsidian1" } },
+		"dart-bone": { },
+		"*": {
+			"material": { "base": "game:block/metal/ingot/{material}" } }
+	},
+	"creativeinventory": { "general": ["*"], "items": ["*"] 
+	},
+	"maxstacksize": 16,
+	"attributes": {
+		"damageByType": {
+			"*-crude": -3,
+			"*-flint": -1.5,
+			"*-obsidian": -0.5,
+			"*-copper": 0.5,
+			"*-bone": 0.5,
+			"*-tinbronze": 1,
+			"*-gold": 1,
+			"*-silver": 1,
+			"*-bismuthbronze": 2,
+			"*-blackbronze": 3,
+			"*-iron": 4,
+			"*-meteoriciron": 4.5,
+			"*-steel": 5 },
+		"breakChanceOnImpactByType": {
+			"*-crude": 0.5,
+			"*-bone": 0.5,
+			"*-flint": 0.4,
+			"*-obsidian": 0.3,
+			"*-copper": 0.2,
+			"*-tinbronze": 0.2,
+			"*-gold": 0.2,
+			"*-silver": 0.2,
+			"*-bismuthbronze": 0.15,
+			"*-blackbronze": 0.2,
+			"*-iron": 0.2,
+			"*-meteoriciron": 0.2,
+			"*-steel": 0.14 },
+		"dartEntityCode": "atlatl:apdart-{material}"
+	}
+
+}

@@ -1,0 +1,37 @@
+{
+  "code": "aplauncher",
+  "class": "TheAtlatl.apl",
+  "creativeinventory": { "general": ["*"], "items": ["*"] },
+  "durability": 160,
+  "attributes": {
+	"damage": 6,
+	},
+  "shape": {
+    "base": "item/launcher-crude"
+	},
+	"texture": {
+		"base": "game:block/wood/bark/oak"
+	},
+	"guiTransform": {
+		"translation": { 
+			"x": 14, "y": -29, "z": 0 },
+		"rotation": { 
+			"x": -179, "y": -127, "z": -52 },
+		"scale": 4.83
+	},
+		"tpHandTransform": {
+		"translation": { 
+			"x": -0.93, "y": -0.8, "z": -0.42 },
+		"rotation": { 
+			"x": -88, "y": -88, "z": -88 },
+		"scale": 1.25
+	},
+		"groundTransform": {
+		"translation": { 
+			"x": 0, "y": 0.8, "z": 0 },
+		"rotation": { 
+			"x": -2, "y": -51, "z": -1 },
+		"origin": { "x": 0.65, "y": 0.65, "z": 0.65 },
+		"scale": 6
+	}
+}

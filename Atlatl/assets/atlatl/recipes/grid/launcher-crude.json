@@ -1,0 +1,12 @@
+	{
+		ingredientPattern: "__O	KOR	OE_",
+		ingredients: {
+			"O": { type: "item", code: "game:log-placed-*", quantity: 3 },
+			"E": { type: "item", code: "game:resin", quantity: 2 },
+			"R": { type: "item", code: "game:rope", quantity: 2 },
+			"K": { type: "item", code: "game:knife-*", "isTool": true, "toolDurabilityCost": 50},
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "aplauncher" }
+	}

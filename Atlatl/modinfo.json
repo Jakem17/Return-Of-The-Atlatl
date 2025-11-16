@@ -1,0 +1,18 @@
+{
+  "Type": "Code",
+  "TextureSize": 32,
+  "Name": "Return Of The Atlatl",
+  "Version": "0.0.1",
+  "NetworkVersion": null,
+  "Description": "Humanity's first superweapon returns, now avalible for Serpah use!",
+  "Website": "",
+  "ModID": "TheAtlatl",
+  "Authors": [
+    "Jaetran_Aurion"
+  ],
+  "Contributors": [],
+  "Side": "Universal",
+  "RequiredOnClient": true,
+  "RequiredOnServer": true,
+  "Dependencies": {}
+}

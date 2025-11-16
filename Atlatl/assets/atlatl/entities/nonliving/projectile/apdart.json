@@ -1,0 +1,55 @@
+{
+	code: "apdart",
+	class: "EntityProjectile",
+	tags: ["inanimate", "projectile"],
+	variantgroups: [
+		{ code: "material", states: ["crude", "flint", "copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver", "iron", "steel", "meteoriciron", "bone", "obsidian" ] },
+	],
+	attributes: {
+		isProjectile: true
+	},
+	hitboxSize: { x: 0.125, y: 0.125 },
+	client: {
+		size: 0.75,
+		renderer: "Shape",
+		shapeByType: { 
+			"apdart-crude": { base: "atlatl:entity/nonliving/projectile/dart-crude" },
+			"apdart-flint": { base: "atlatl:entity/nonliving/projectile/dart-stone" },
+			"apdart-obsidian": { base: "atlatl:entity/nonliving/projectile/dart-stone" },
+			"apdart-bone": { base: "atlatl:entity/nonliving/projectile/dart-stone" },
+			"*": { base: "atlatl:entity/nonliving/projectile/dart-metal" } 
+		},
+		texturesByType : {
+			"apdart-crude": {
+				handle: {base: "game:block/wood/debarked/oak" } },
+			"apdart-flint": { 
+				handle: {base: "game:block/wood/debarked/oak"},
+				material: {base: "game:block/stone/flint" } },
+			"apdart-obsidian": {
+				material: {base: "game:block/stone/rock/obsidian1" } },
+			"apdart-bone": { 
+				handle: {base: "game:block/wood/debarked/oak" },
+				material: {base: "game:block/creature/bone/bone1"} },
+			"*": {
+			material: { base: "game:block/metal/ingot/{material}" } }
+		},
+		behaviors: [
+			{ code: "passivephysics",
+				groundDragFactor: 1,
+				airDragFactor: 0.25,
+				gravityFactor: 0.75
+			}, 
+			{ code: "interpolateposition" } ], },
+	server: {
+		behaviors: [
+			{ 
+				code: "passivephysics",
+				groundDragFactor: 1,
+				airDragFactor: 0.25,
+				gravityFactor: 0.75
+			}, 
+			{ code: "despawn", minSeconds: 600 },
+			{ code: "entitystatetags" }
+		],
+	}
+}

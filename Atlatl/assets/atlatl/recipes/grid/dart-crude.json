@@ -1,0 +1,10 @@
+	{
+		ingredientPattern: "_KS	_S_	S__",
+		ingredients: {
+			"S": { type: "item", code: "game:stick", quantity: 1 },
+			"K": { type: "item", code: "game:knife-*", "isTool": true, "toolDurabilityCost": 15},
+		},
+		width: 3,
+		height: 3,
+		output: { type: "item", code: "dart-crude" }
+	}
