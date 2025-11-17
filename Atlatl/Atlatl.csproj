@@ -62,4 +62,9 @@
   </Content>
 </ItemGroup>
 
+<ItemGroup>
+  <Folder Include="assets\atlatl\recipes\knapping\" />
+  <Folder Include="assets\atlatl\recipes\smithing\" />
+</ItemGroup>
+
 </Project>

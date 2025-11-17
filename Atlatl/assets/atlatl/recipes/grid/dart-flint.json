@@ -1,0 +1,24 @@
+[
+	{
+		ingredientPattern: "H	S	F",
+		ingredients: {
+			"H": { type: "item", code: "atlatl:darthead-*", name: "metal", quantity: 4 },
+			"S": { type: "item", code: "game:stick", quantity: 12 },
+			"F": { type: "item", code: "game:feather" }
+		},
+		width: 1,
+		height: 3,
+		output: { type: "item", code: "atlatl:dart-{metal}", quantity: 4 }
+	},
+	{
+		ingredientPattern: "H	S",
+		requiresTrait: "bowyer",
+		ingredients: {
+			"H": { type: "item", code: "game:knife-*", "isTool": true, "toolDurabilityCost": 3},
+			"S": { type: "item", code: "stick", quantity: 3 }
+		},
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "atlatl:dart-crude", quantity: 1  }
+	}
+]

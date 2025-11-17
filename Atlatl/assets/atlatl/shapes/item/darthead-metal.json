@@ -1,0 +1,118 @@
+{
+	"editor": {
+		"allAngles": false,
+		"entityTextureMode": false
+	},
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textureSizes": {
+	},
+	"textures": {
+	},
+	"elements": [
+		{
+			"name": "base",
+			"from": [ 8.0, 0.0, 18.0 ],
+			"to": [ 8.0, 0.0, 18.0 ],
+			"rotationOrigin": [ 8.0, 0.0, 18.0 ],
+			"rotationY": 180.0,
+			"faces": {
+				"north": { "texture": "#handle", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+				"east": { "texture": "#handle", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+				"south": { "texture": "#handle", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+				"west": { "texture": "#handle", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+				"up": { "texture": "#handle", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+				"down": { "texture": "#handle", "uv": [ 0.0, 0.0, 0.5, 0.5 ] }
+			},
+			"children": [
+				{
+					"name": "DartHead",
+					"from": [ -0.42, -0.02, 9.81 ],
+					"to": [ -0.22, 0.38, 11.01 ],
+					"rotationOrigin": [ -1.0, 0.0, 10.0 ],
+					"faces": {
+						"north": { "texture": "#material", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+						"east": { "texture": "#material", "uv": [ 0.0, 0.0, 15.0, 0.5 ], "autoUv": false },
+						"south": { "texture": "#material", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+						"west": { "texture": "#material", "uv": [ 0.0, 0.0, 16.0, 0.5 ], "autoUv": false },
+						"up": { "texture": "#material", "uv": [ 0.0, 0.0, 0.5, 14.0 ], "autoUv": false },
+						"down": { "texture": "#material", "uv": [ 0.0, 0.0, 0.5, 15.0 ], "autoUv": false }
+					},
+					"children": [
+						{
+							"name": "DartHead2",
+							"from": [ -0.18, 0.14, 0.29 ],
+							"to": [ 0.32, 0.24, 1.49 ],
+							"rotationOrigin": [ -0.58, 0.02, 0.19 ],
+							"faces": {
+								"north": { "texture": "#material", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+								"east": { "texture": "#material", "uv": [ 0.0, 0.0, 15.0, 0.5 ], "autoUv": false },
+								"south": { "texture": "#material", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+								"west": { "texture": "#material", "uv": [ 0.0, 0.0, 16.0, 0.5 ], "autoUv": false },
+								"up": { "texture": "#material", "uv": [ 0.0, 0.0, 0.5, 14.0 ], "autoUv": false },
+								"down": { "texture": "#material", "uv": [ 0.0, 0.0, 0.5, 15.0 ], "autoUv": false }
+							}
+						},
+						{
+							"name": "DartHead3",
+							"from": [ -0.08, 0.14, 1.49 ],
+							"to": [ 0.22, 0.24, 1.64 ],
+							"rotationOrigin": [ -0.58, 0.02, 0.19 ],
+							"faces": {
+								"north": { "texture": "#material", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+								"east": { "texture": "#material", "uv": [ 0.0, 0.0, 15.0, 0.5 ], "autoUv": false },
+								"south": { "texture": "#material", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+								"west": { "texture": "#material", "uv": [ 0.0, 0.0, 16.0, 0.5 ], "autoUv": false },
+								"up": { "texture": "#material", "uv": [ 0.0, 0.0, 0.5, 14.0 ], "autoUv": false },
+								"down": { "texture": "#material", "uv": [ 0.0, 0.0, 0.5, 15.0 ], "autoUv": false }
+							}
+						},
+						{
+							"name": "DartHead4",
+							"from": [ 0.0, 0.14, 1.64 ],
+							"to": [ 0.15, 0.24, 1.79 ],
+							"rotationOrigin": [ -0.58, 0.02, 0.19 ],
+							"faces": {
+								"north": { "texture": "#material", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+								"east": { "texture": "#material", "uv": [ 0.0, 0.0, 15.0, 0.5 ], "autoUv": false },
+								"south": { "texture": "#material", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+								"west": { "texture": "#material", "uv": [ 0.0, 0.0, 16.0, 0.5 ], "autoUv": false },
+								"up": { "texture": "#material", "uv": [ 0.0, 0.0, 0.5, 14.0 ], "autoUv": false },
+								"down": { "texture": "#material", "uv": [ 0.0, 0.0, 0.5, 15.0 ], "autoUv": false }
+							}
+						},
+						{
+							"name": "DartHead5",
+							"from": [ -0.28, 0.14, 0.19 ],
+							"to": [ -0.18, 0.24, 1.39 ],
+							"rotationOrigin": [ -0.58, 0.02, 0.19 ],
+							"rotationY": 5.0,
+							"faces": {
+								"north": { "texture": "#material", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+								"east": { "texture": "#material", "uv": [ 0.0, 0.0, 15.0, 0.5 ], "autoUv": false },
+								"south": { "texture": "#material", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+								"west": { "texture": "#material", "uv": [ 0.0, 0.0, 16.0, 0.5 ], "autoUv": false },
+								"up": { "texture": "#material", "uv": [ 0.0, 0.0, 0.5, 14.0 ], "autoUv": false },
+								"down": { "texture": "#material", "uv": [ 0.0, 0.0, 0.5, 15.0 ], "autoUv": false }
+							}
+						},
+						{
+							"name": "DartHead6",
+							"from": [ 0.32, 0.14, 0.09 ],
+							"to": [ 0.42, 0.24, 1.29 ],
+							"rotationOrigin": [ -0.58, 0.02, 0.19 ],
+							"rotationY": -5.0,
+							"faces": {
+								"north": { "texture": "#material", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+								"east": { "texture": "#material", "uv": [ 0.0, 0.0, 15.0, 0.5 ], "autoUv": false },
+								"south": { "texture": "#material", "uv": [ 0.0, 0.0, 0.5, 0.5 ] },
+								"west": { "texture": "#material", "uv": [ 0.0, 0.0, 16.0, 0.5 ], "autoUv": false },
+								"up": { "texture": "#material", "uv": [ 0.0, 0.0, 0.5, 14.0 ], "autoUv": false },
+								"down": { "texture": "#material", "uv": [ 0.0, 0.0, 0.5, 15.0 ], "autoUv": false }
+							}
+						}
+					]
+				}
+			]
+		}
+	]}

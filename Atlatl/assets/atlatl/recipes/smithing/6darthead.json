@@ -1,0 +1,12 @@
+{
+	ingredient: { type: "item", code: "game:ingot-*", name: "metal", allowedVariants: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "silver", "gold", "iron", "meteoriciron", "steel"] },
+	pattern: [[
+		"##_##_##",
+		"#__#__#_",
+		"________",
+		"##_##_##",
+		"#__#__#_",
+	]],
+	name: "6 Dartheads",
+	output: { type: "item", code: "atlatl:darthead-{metal}", stacksize: 6  }
+}

@@ -5,22 +5,27 @@
 	{ "code": "type", "states": ["crude", "simple"] } ],
   "creativeinventory": { "general": ["*"], "items": ["*"] },
   "durabilityByType": {
-	  "crude": 160,
-	  "simple": 480 },
+	  "aplauncher-crude": 160,
+	  "aplauncher-simple": 480 },
   "attributes": {
 	"damage": 6,
-	},
-  "shape": {
-    "base": "item/launcher-crude",
-	"alternates": [
-		{ "base": "atlatl:item/launcher-crude-charge1"}	
-	]
+	"statModifierByType": {
+			"aplauncher-crude": { "rangedWeaponsAcc": -0.05 },
+			"aplauncher": { "rangedWeaponsAcc": 0 } } 
+  },
+	"shape": {
+		"base": "atlatl:item/launcher-crude",
+		"alternates": [
+			{ "base": "atlatl:item/launcher-crude-charge1" }
+		]
 	},
 	"texturesByType": {
 		"aplauncher-crude": { 
+			"shaft": {"base":  "game:block/wood/debarked/oak" },
 			"material": {"base":  "game:block/wood/bark/oak" },
 			"handle": {"base":  "game:block/wood/bark/oak" } },
 		"aplauncher-simple": { 
+			"shaft": {"base":  "game:block/wood/debarked/oak" },
 			"material": {"base":  "game:block/linen" },
 			"handle": {"base": "game:block/wood/debarked/oak" } }
 	},

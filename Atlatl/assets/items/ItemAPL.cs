@@ -94,16 +94,11 @@ namespace Atlatl.assets.items
             byEntity.Attributes.SetInt("aimingCancel", 0);
             byEntity.StartAnimation("aim");
 
-            // Plays a sound effect when the Atlatl is drawn. Might remove later or replace with a "wood knocking" effect.
-            IPlayer byPlayer = null;
-            if (byEntity is EntityPlayer) byPlayer = byEntity.World.PlayerByUid(((EntityPlayer)byEntity).PlayerUID);
-
-
-
             if (byEntity.World is IClientWorldAccessor)
             {
                 slot.Itemstack.TempAttributes.SetInt("renderVariant", 1);
             }
+            (byEntity as EntityPlayer)?.Player?.InventoryManager.BroadcastHotbarSlot();
 
             slot.Itemstack.Attributes.SetInt("renderVariant", 1);
 
@@ -117,8 +112,8 @@ namespace Atlatl.assets.items
 
             if (byEntity.World is IClientWorldAccessor)
             {
-                int renderVariant = GameMath.Clamp((int)Math.Ceiling(secondsUsed * 4), 0, 2);
-                int prevRenderVariant = slot.Itemstack.Attributes.GetInt("renderVariant", 1);
+                int renderVariant = GameMath.Clamp((int)Math.Ceiling(secondsUsed * 5), 0, 2);
+                int prevRenderVariant = slot.Itemstack.Attributes.GetInt("renderVariant", 2);
 
                 slot.Itemstack.TempAttributes.SetInt("renderVariant", renderVariant);
                 slot.Itemstack.Attributes.SetInt("renderVariant", renderVariant);
@@ -132,10 +127,10 @@ namespace Atlatl.assets.items
 
             if (byEntity.World is IClientWorldAccessor)
             {
-                slot.Itemstack.TempAttributes.SetInt("renderVariant", 1);
+                slot.Itemstack.TempAttributes.SetInt("renderVariant", 2);
             }
 
-            slot.Itemstack.Attributes.SetInt("renderVariant", 1);
+            slot.Itemstack.Attributes.SetInt("renderVariant", 2);
 
             return true;
         }
@@ -251,16 +246,11 @@ namespace Atlatl.assets.items
 
             byEntity.World.SpawnPriorityEntity(entityToSpawn);
 
+            // Causes the item to have its durability decreased by one.
             slot.Itemstack.Collectible.DamageItem(byEntity.World, byEntity, slot);
             slot.MarkDirty();
 
             byEntity.AnimManager.StartAnimation("bowhit");
-
-            // Makes the fired item able to be collected again.
-            slot.Itemstack.Collectible.DamageItem(byEntity.World, byEntity, slot);
-
-            //Plays the animation for firing the sling. Need to create my own animation for firing the Atlatl.
-            byEntity.AnimManager.StartAnimation("slingthrowbalearic");
 
             // Stops the animation after a set amount of... something. Its 400 right now, but I don't know if thats ticks, seconds, or frames. Might be frames.
             byEntity.World.RegisterCallback((dt) => byEntity.AnimManager.StopAnimation("slingthrowbalearic"), 400);
@@ -274,6 +264,9 @@ namespace Atlatl.assets.items
 
             float dmg = inSlot.Itemstack.Collectible.Attributes["damage"].AsFloat(0);
             if (dmg != 0) dsc.AppendLine(Lang.Get("sling-piercingdamage", dmg));
+
+            float accuracyBonus = inSlot.Itemstack.Collectible?.Attributes["statModifier"]["rangedWeaponsAcc"].AsFloat(0) ?? 0;
+            if (accuracyBonus != 0) dsc.AppendLine(Lang.Get("bow-accuracybonus", accuracyBonus > 0 ? "+" : "", (int)(100 * accuracyBonus)));
         }
     }
 }

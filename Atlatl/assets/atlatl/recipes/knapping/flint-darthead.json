@@ -1,0 +1,17 @@
+{
+	ingredient: { type: "item", code: "game:flint" },
+	pattern: [[
+		"_#_____#__",
+		"###___###_",
+		"#_#___#_#_",
+		"___#_#____",
+		"_#_###_#__",
+		"###_#_###_",
+		"#_#___#_#_",
+		"___#_#____",
+		"___###____",
+		"____#_____"
+	]],
+	name: "Flint Darthead",
+	output: { type: "item", code: "darthead-flint", stacksize: 6  }
+}
