@@ -1,4 +1,4 @@
-﻿using Atlatl.assets.items;
+﻿using Atlatl.src;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Config;

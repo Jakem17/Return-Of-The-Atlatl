@@ -8,7 +8,7 @@ using Vintagestory.API.Config;
 using Vintagestory.API.MathTools;
 using Vintagestory.API.Util;
 
-namespace Atlatl.assets.items
+namespace Atlatl.src
 {
     internal class ItemAPL : Item
     {

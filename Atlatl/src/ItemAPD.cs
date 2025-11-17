@@ -2,7 +2,7 @@
 using Vintagestory.API.Common;
 using Vintagestory.API.Config;
 
-namespace Atlatl.assets.items
+namespace Atlatl.src
 {
     internal class ItemAPD : Item
     {

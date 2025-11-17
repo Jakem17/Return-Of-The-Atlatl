@@ -1,6 +1,6 @@
 {
   "code": "dart",
-  "class": "TheAtlatl.apd",
+  "class": "returnoftheatlatl.apd",
   "variantgroups": [
 		{ "code": "material", "states": ["crude", "flint", "copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver", "iron", "meteoriciron", "steel", "bone", "obsidian" ] } ],
   "guiTransform": {

@@ -1,6 +1,6 @@
 {
   "code": "aplauncher",
-  "class": "TheAtlatl.apl",
+  "class": "returnoftheatlatl.apl",
   "variantgroups": [
 	{ "code": "type", "states": ["crude", "simple"] } ],
   "creativeinventory": { "general": ["*"], "items": ["*"] },
