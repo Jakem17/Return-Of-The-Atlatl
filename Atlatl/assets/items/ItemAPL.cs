@@ -1,18 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using Vintagestory.Essentials;
-using Vintagestory.API.Common;
-using Vintagestory.API.MathTools;
-using Vintagestory.GameContent;
 using Vintagestory.API.Client;
+using Vintagestory.API.Common;
 using Vintagestory.API.Common.Entities;
 using Vintagestory.API.Config;
+using Vintagestory.API.MathTools;
 using Vintagestory.API.Util;
-using Vintagestory.Client.NoObf;
-using System.Diagnostics;
 
 namespace Atlatl.assets.items
 {
@@ -69,7 +63,7 @@ namespace Atlatl.assets.items
                 if (invslot is ItemSlotCreative) return true;
 
                 ItemStack stack = invslot.Itemstack;
-                if (stack != null && stack.Collectible != null && stack.Collectible is ItemAPD && stack.StackSize > 0 )
+                if (stack != null && stack.Collectible != null && stack.Collectible is ItemAPD && stack.StackSize > 0)
                 {
                     slot = invslot;
                     return false;
@@ -157,7 +151,7 @@ namespace Atlatl.assets.items
 
             return true;
         }
-        
+
         // Below deals entirely with the actual firing after being "drawn" for enough time. If held for long enough, it fires a dart in the direction aimed.
         public override void OnHeldInteractStop(float secondsUsed, ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel)
         {
@@ -270,4 +264,3 @@ namespace Atlatl.assets.items
         }
     }
 }
-    
